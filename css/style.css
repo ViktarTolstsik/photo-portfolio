@@ -182,22 +182,42 @@ transition: var(--transition);
 	transform: scale(0.9);
 }
 
-#image-track {
-	display: flex;
-	gap: 4vmin;
-	left: 50%;
-	top: 50%;
-	transform: translate(0%, -50%);
-	user-select: none;
-	overflow:unset;
-	/* -- Prevent image highlighting -- */
+.scroll {
+	position: relative;
+	width: 100vw;
+	overflow: hidden;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
 }
 
-#image-track>.image {
-	width: 40vmin;
-	height: 56vmin;
-	object-fit: cover;
-	object-position: 100% center;
+.m-scroll {
+	overflow: hidden;
+	height: 100%;
+	white-space: nowrap;
+	animation: scrollText 10s infinite linear;
+	margin: 0;
+	font-size: 0;
+	display: flex;
+	justify-content: space-between;
+	width: fit-content;
+}
+
+span {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+@keyframes scrollText {
+	from {
+		transform: translateX(0%);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
 }
 
 /*contact*/
