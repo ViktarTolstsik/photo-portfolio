@@ -108,6 +108,9 @@ h1,h2,h3{
 .social-links li a:hover{
 	opacity: 0.7;
 }
+.boostyIcon{
+	padding: 1.3rem;
+}
 
 /*about*/
 .about-left{
@@ -177,6 +180,24 @@ transition: var(--transition);
 }
 .portfolio-grid > div:hover{
 	transform: scale(0.9);
+}
+
+#image-track {
+	display: flex;
+	gap: 4vmin;
+	left: 50%;
+	top: 50%;
+	transform: translate(0%, -50%);
+	user-select: none;
+	overflow:unset;
+	/* -- Prevent image highlighting -- */
+}
+
+#image-track>.image {
+	width: 40vmin;
+	height: 56vmin;
+	object-fit: cover;
+	object-position: 100% center;
 }
 
 /*contact*/
